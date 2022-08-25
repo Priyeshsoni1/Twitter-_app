@@ -1,0 +1,27 @@
+extends layouts/login-layout.pug
+
+block content
+    img(src='https://images.unsplash.com/photo-1622920157882-35cf1304beb4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dHdpdHRlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',style='width:1000px ; height: 700px;  position: relative;margin-top:0px;')
+    .loginContainer
+        
+        #icon
+        
+            img(src='/images/icon.png', style='width:50px;height:50px;')
+        h1 LOGIN
+        
+        form(method="post")
+
+            p.errorMessage #{errorMessage}
+
+            //- input(type="text", name="logUsername", placeholder="Username or email", value=logUsername required="")
+            //- input(type="password", name="logPassword", placeholder="Password", required="")
+
+            input(type="text", name="logUsername", placeholder="Username or email" required="")
+            input(type="password", name="logPassword", placeholder="Password", required="")
+
+            input(type="submit", value="Login")
+        //- h2 IF YOU DON&apos;T HAVE ACCOUNT
+        h2  REGISTER HERE!. 
+        a(href='/register')
+            button Need an account? Register here.
+        
